@@ -8,10 +8,8 @@ import java.util.Observer;
  */
 public class HeatIndexDisplay implements Observer, DisplayElement {
     private float heatindex = 0.0f;
-    private Observable observable;
 
     public HeatIndexDisplay(Observable observable){
-        this.observable = observable;
         observable.addObserver(this);
     }
     public void update(Observable o, Object arg) {

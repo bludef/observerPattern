@@ -7,12 +7,10 @@ import java.util.Observer;
  * Created by Administrator on 12/01/2017.
  */
 public class CurrentConditionsDisplay implements Observer,DisplayElement {
-    Observable observable; // subjcet
     private float temperature;
     private float humidity;
 
     public CurrentConditionsDisplay(Observable observable){
-        this.observable = observable;
         observable.addObserver(this);
     }
 
